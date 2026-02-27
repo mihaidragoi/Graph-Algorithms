@@ -1,15 +1,39 @@
-📂 Laboratory Roadmap🏁 
-Lab 2: Maze Exploration (Labirint)Problem: Finding the exit in a grid-based maze.
-Algorithm: Implementation of Breadth-First Search (BFS) to ensure the shortest path in an unweighted grid.Focus: Understanding state-space exploration and queue-based traversals.
+Graph Algorithms
+A comprehensive C++ application built with the Qt Framework for visualizing and solving classic graph theory problems through an interactive Graphical User Interface (GUI).
 
-🔗 Lab 3: Connectivity & TopologyFocuses on the structural properties of directed and undirected graphs:Topological Sorting: Ordering nodes such that for every edge $u \rightarrow v$, $u$ comes before $v$.
-Connected Components: Identifying isolated subgraphs.Strongly Connected Components (SCC): Implementation of Tarjan’s or Kosaraju’s algorithm to find maximal subgraphs where every node is reachable from every other node.
+🚀 Main Features
+Algorithm Visualizations: Includes independent modules for several core graph algorithms:
 
-🗺️ Lab 4: Shortest Paths (Dijkstra on Luxembourg Map)Challenge: Finding the optimal route on a real-world map dataset (Luxembourg).
-Algorithm: Dijkstra’s Algorithm using a Priority Queue (Min-Heap) for efficiency.Key Feature: Handling large-scale graphs with thousands of nodes and edges representing geographical coordinates.
+Dijkstra's Algorithm: Shortest path finding (features a real-world Luxembourg map parser).
 
-🧬 Lab 5: Metaheuristics (Genetic Algorithms)Problem: Solving optimization problems inspired by natural selection.Components: Population management, Tournament Selection, Single-point Crossover, and Mutation.Application: Often used as a heuristic for NP-hard problems.
+Breadth-First Search (BFS): Maze solving and traversal.
 
-🚲 Lab 6: The Traveling Salesperson Problem (TSP)Goal: Find the shortest possible route that visits every city exactly once and returns to the origin.Approaches: Explored Backtracking (for exact solutions on small graphs) and Heuristic/Greedy methods for larger sets.
+Connected Components: Detection of strongly and weakly connected components.
 
-🌊 Lab 7: Network Flow & CutsMax-Flow: Finding the maximum amount of "flow" that can pass through a single-source, single-sink network using the Edmonds-Karp algorithm.Min-Cut: Identifying the minimum set of edges that, if removed, would disconnect the source from the sink (perfectly matching the Max-Flow value).
+Topological Sorting: Dependency resolution for directed acyclic graphs.
+
+Maximum Flow / Minimum Cut: Network flow optimization.
+
+Traveling Salesperson Problem (TSP): Optimal routing calculations.
+
+Interactive UI: A Qt-based interface (mainwindow) to draw, load, and visually interact with the graphs.
+
+Advanced Data Structures: Uses KD-Trees (kdtree.cpp/h) for fast spatial queries and relies on pointers for efficient Node and Edge memory management.
+
+Real Datasets: Includes parsers for real-world XML data (Harta_Luxemburg.xml) and text-based graph representations (orase.txt).
+
+📁 Project Structure
+The repository contains multiple Qt .pro files, allowing you to build and run each algorithm module independently:
+
+Core Logic (graph, node, edge, kdtree): The mathematical foundation and pointer-based data structures.
+
+UI Components (mainwindow.cpp/h/ui): The visual canvas and graphical event handlers.
+
+Project Files (*.pro): Separate run configurations for each specific algorithm implementation (e.g., Dijkstra-HartaLuxemburg.pro, LabirintulBFS.pro).
+
+🛠️ Required Dependencies
+To compile and run this project, you will need:
+
+C++ Compiler (supporting C++11 or newer).
+
+Qt Framework (Qt Creator IDE is highly recommended for opening the .pro files and rendering the .ui components).
